@@ -94,6 +94,7 @@ class MapData:
             projection (int or str):
                 The projection to use for map reprojection
         """
+        print('I am here now:', projection)
         if issubclass(type(projection), int):
             projection = "EPSG:" + str(projection)
             self.working_projection = projection
