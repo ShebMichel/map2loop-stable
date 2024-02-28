@@ -142,6 +142,7 @@ class Project(object):
 
         # Sanity check on working projection parameter
         if issubclass(type(working_projection), str) or issubclass(type(working_projection), int):
+            print('Checking working project now: ',working_projection, type(working_projection))
             self.map_data.set_working_projection(working_projection)
         elif type(working_projection) is None:
             if verbose_level != VerboseLevel.NONE:
@@ -181,6 +182,7 @@ class Project(object):
         if fold_filename != "":
             self.map_data.set_filename(Datatype.FOLD, fold_filename)
         if dtm_filename != "":
+            print('Checking dtm now: ',dtm_filename)
             self.map_data.set_filename(Datatype.DTM, dtm_filename)
         if fault_orientation_filename != "":
             self.map_data.set_filename(Datatype.FAULT_ORIENTATION, fault_orientation_filename)
