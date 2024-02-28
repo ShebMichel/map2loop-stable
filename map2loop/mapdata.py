@@ -67,6 +67,7 @@ class MapData:
             verbose_level (VerboseLevel, optional):
                 How much console output is sent. Defaults to VerboseLevel.ALL.
         """
+        print('I am here now 1:', projection)
         self.raw_data = [None] * len(Datatype)
         self.data = [None] * len(Datatype)
         self.contacts = None
@@ -83,7 +84,7 @@ class MapData:
         self.colour_filename = None
         self.tmp_path = tmp_path
         self.verbose_level = verbose_level
-
+        print('I am here now 2:', projection)
         self.config = Config()
 
     def set_working_projection(self, projection):
