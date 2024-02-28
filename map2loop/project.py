@@ -126,11 +126,13 @@ class Project(object):
         self.throw_calculator = ThrowCalculatorAlpha()
         self.fault_orientation = FaultOrientationNearest()
         self.loop_filename = loop_project_filename
-
+        print('Avant self.map_data')
         self.map_data = MapData(tmp_path=tmp_path, verbose_level=verbose_level)
+        print('apres self.map_data')
         self.map2model = Map2ModelWrapper(self.map_data)
         self.stratigraphic_column = StratigraphicColumn()
         self.deformation_history = DeformationHistory()
+        print('apres self.deformation_history')
 
         self.fault_orientations = pandas.DataFrame(columns=["ID", "DIPDIR", "DIP", "X", "Y", "Z"])
         self.fault_samples = pandas.DataFrame(columns=["ID", "X", "Y", "Z"])
@@ -139,7 +141,7 @@ class Project(object):
         # Check for alternate config filenames in kwargs
         if "metadata_filename" in kwargs and config_filename == "":
             config_filename = kwargs["metadata_filename"]
-
+            print('checking config_filename')
         # Sanity check on working projection parameter
         if issubclass(type(working_projection), str) or issubclass(type(working_projection), int):
             print('Checking working project now: ',working_projection, type(working_projection))
