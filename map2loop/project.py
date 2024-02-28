@@ -176,12 +176,16 @@ class Project(object):
                     f"Australian state {use_australian_state_data} not in state url database"
                 )
         if geology_filename != "":
+            print('geology file: ',geology_filename )
             self.map_data.set_filename(Datatype.GEOLOGY, geology_filename)
         if structure_filename != "":
+            print('structure file: ',structure_filename )
             self.map_data.set_filename(Datatype.STRUCTURE, structure_filename)
         if fault_filename != "":
+            print('fault file: ',fault_filename )
             self.map_data.set_filename(Datatype.FAULT, fault_filename)
         if fold_filename != "":
+            print('fold file: ',fault_filename )
             self.map_data.set_filename(Datatype.FOLD, fold_filename)
         if dtm_filename != "":
             print('Checking dtm now: ',dtm_filename)
