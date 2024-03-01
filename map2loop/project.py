@@ -189,7 +189,7 @@ class Project(object):
             self.map_data.set_filename(Datatype.FOLD, fold_filename)
         if dtm_filename != "":
             print('Checking dtm now: ',dtm_filename)
-            selfhttps://github.com/ShebMichel/map2loop_stable.git.map_data.set_filename(Datatype.DTM, dtm_filename)
+            self.map_data.set_filename(Datatype.DTM, dtm_filename)
         if fault_orientation_filename != "":
             print('Checking fault orientation now: ',fault_orientation_filename)
             self.map_data.set_filename(Datatype.FAULT_ORIENTATION, fault_orientation_filename)
